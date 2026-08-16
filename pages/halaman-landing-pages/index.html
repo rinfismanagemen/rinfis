@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="id" class="light" id="html-root">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 1. VERIFIKASI GOOGLE SEARCH CONSOLE -->
+    <!-- Ganti 'KODE_VERIFIKASI_DARI_GSC' dengan kode unik dari panel Google Search Console -->
+    <meta name="google-site-verification" content="KODE_VERIFIKASI_DARI_GSC" />
+
+    <!-- 2. SEO META TAGS UTAMA -->
+    <title>RINFIS - Aplikasi Kasir Online POS & Manajemen Bisnis Multi Cabang</title>
+    <meta name="description" content="RINFIS adalah aplikasi kasir online (POS) modern untuk toko, cafe, & UMKM. Dukung manajemen stok, rekap penjualan otomatis, QR Order, & multi-cabang.">
+    <meta name="keywords" content="RINFIS, aplikasi kasir online, software kasir toko, pos indonesia, sistem kasir cafe, rekap penjualan otomatis, kasir multi cabang, aplikasi kasir gratis">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://rinfis.infinityfreeapp.com/" />
+
+    <!-- 3. OPEN GRAPH (Tampilan saat link dibagikan di WA/Social Media) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rinfis.infinityfreeapp.com/">
+    <meta property="og:title" content="RINFIS - Sistem Kasir & Manajemen Bisnis Modern">
+    <meta property="og:description" content="Kelola usaha lebih mudah, cepat, dan tanpa batas. Aplikasi kasir modern pendukung multi-cabang & laporan otomatis.">
+    <meta property="og:image" content="https://rinfis.infinityfreeapp.com/assets/img/logo/rinfisunguawal.png">
+
+    <!-- 4. STRUCTURED DATA / SCHEMA.ORG (Membantu Google Memahami Software Anda) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "RINFIS",
+      "url": "https://rinfis.infinityfreeapp.com/",
+      "operatingSystem": "All",
+      "applicationCategory": "BusinessApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "IDR"
+      },
+      "description": "Aplikasi kasir online POS dan manajemen bisnis modern multi-cabang untuk UMKM, retail, dan cafe."
+    }
+    </script>
+
+    <!-- CDN & Stylesheet Asli Anda -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-slate-900 dark:bg-slate-900 dark:text-white antialiased transition-colors duration-300"
+    id="body-root">
+
+    <!-- Header / Navbar -->
+    <header
+        class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-indigo-100 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div
+                    class="w-10 h-10 rounded-xl overflow-hidden shadow-md shadow-indigo-200 dark:shadow-none bg-white flex items-center justify-center border border-indigo-100 dark:border-slate-700">
+                    <img src="assets/img/logo/rinfisunguawal.png" alt="Logo RINFIS" class="w-full h-full object-cover">
+                </div>
+                <span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">RIN<span
+                        class="text-indigo-600 dark:text-indigo-400">FIS</span></span>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-sm text-slate-700 dark:text-slate-200">
+                <a href="#fitur" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Keunggulan</a>
+                <a href="#transformasi"
+                    class="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Transformasi</a>
+                <a href="#kalkulator" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Simulasi</a>
+                <a href="#artikel" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Artikel</a>
+                <a href="#harga" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Pilihan
+                    Paket</a>
+                <a href="#faq" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Tanya RIFA AI</a>
+            </nav>
+            <div class="flex items-center space-x-3">
+                <!-- Tombol Toggle Dark/Light Mode -->
+                <button id="theme-toggle" type="button"
+                    class="p-2.5 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-indigo-50 dark:hover:bg-slate-800 transition-all border border-indigo-100 dark:border-slate-700">
+                    <i id="theme-icon" class="fa-solid fa-sun text-sm text-amber-500"></i>
+                </button>
+
+                <a href="pages/halaman-awal/login.php"
+                    class="hidden sm:inline-flex items-center justify-center px-4 py-2.5 rounded-xl text-indigo-600 dark:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-slate-800 text-sm font-semibold transition-all">
+                    Masuk
+                </a>
+                <a href="pages/halaman-awal/login.php"
+                    class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold shadow-md shadow-indigo-200 dark:shadow-none transition-all">
+                    Coba Gratis <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+        class="relative overflow-hidden pt-16 pb-20 lg:pt-24 lg:pb-32 bg-gradient-to-b from-indigo-50/70 via-white to-white dark:from-slate-800/50 dark:via-slate-900 dark:to-slate-900 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div
+                class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-50 dark:bg-slate-800 border border-indigo-200 dark:border-slate-700 text-indigo-700 dark:text-indigo-300 text-xs font-semibold mb-6 shadow-sm">
+                <span class="flex h-2 w-2 rounded-full bg-indigo-600 dark:bg-indigo-400 animate-pulse"></span>
+                🚀 Tingkatkan Omzet & Kontrol Stok Lebih Akurat
+            </div>
+            <h1
+                class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight max-w-4xl mx-auto leading-tight">
+                Kelola Usaha Lebih Mudah, Cepat, dan <span class="text-indigo-600 dark:text-indigo-400">Tanpa
+                    Batas</span>
+            </h1>
+            <p class="mt-6 text-lg sm:text-xl text-slate-700 dark:text-slate-200 max-w-2xl mx-auto leading-relaxed">
+                Aplikasi kasir modern dengan arsitektur handal, mendukung operasional multi-cabang, QR Order, hingga
+                laporan keuangan otomatis dalam satu genggaman.
+            </p>
+
+            <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="pages/halaman-awal/login.php"
+                    class="w-full sm:w-auto px-8 py-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-base shadow-xl shadow-indigo-200 dark:shadow-none transition-all transform hover:-translate-y-0.5">
+                    <i class="fa-solid fa-rocket mr-2"></i> Mulai Coba Gratis Sekarang
+                </a>
+                <a href="#harga"
+                    class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white dark:bg-slate-800 hover:bg-indigo-50 dark:hover:bg-slate-700 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-slate-700 font-semibold text-base transition-all shadow-sm">
+                    Lihat Daftar Harga & Fitur
+                </a>
+            </div>
+
+            <div class="mt-6 flex items-center justify-center space-x-6 text-xs text-slate-600 dark:text-slate-300">
+                <span class="flex items-center"><i
+                        class="fa-solid fa-check text-indigo-600 dark:text-indigo-400 mr-1.5"></i> Tanpa Kartu
+                    Kredit</span>
+                <span class="flex items-center"><i
+                        class="fa-solid fa-check text-indigo-600 dark:text-indigo-400 mr-1.5"></i> Setup Kurang dari
+                    2
+                    Menit</span>
+                <span class="flex items-center"><i
+                        class="fa-solid fa-check text-indigo-600 dark:text-indigo-400 mr-1.5"></i> Paket Gratis
+                    Tersedia</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Arsitektur & Keunggulan Teknis -->
+    <section id="fitur"
+        class="py-20 bg-white dark:bg-slate-900 border-y border-indigo-100 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+
+            <!-- Emotional Benefit Section -->
+            <div
+                class="mb-16 bg-gradient-to-r from-indigo-900 to-indigo-700 dark:from-indigo-950 dark:to-indigo-900 rounded-3xl p-8 sm:p-12 text-white shadow-xl shadow-indigo-200 dark:shadow-none relative overflow-hidden border border-indigo-600 dark:border-indigo-800">
+                <div class="absolute -right-10 -bottom-10 opacity-10 text-9xl">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <div class="max-w-3xl relative z-10">
+                    <span
+                        class="inline-block bg-indigo-800 dark:bg-indigo-900 text-indigo-100 text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full mb-4 border border-indigo-600">
+                        ☕ Bebas Cemas, Fokus Berkembang
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight mb-4">
+                        Ucapkan Selamat Tinggal pada Rasa Stres Mengurus Catatan Toko yang Berantakan
+                    </h2>
+                    <p class="text-indigo-100 text-base sm:text-lg leading-relaxed mb-8">
+                        Kami tahu betapa melelahkannya menghabiskan waktu berjam-jam hanya untuk mencocokkan stok
+                        dan
+                        menghitung omzet harian. Dengan sistem yang transparan, aman, dan otomatis, kini Anda bisa
+                        menikmati malam dengan lebih tenang dan memiliki lebih banyak waktu berharga bersama
+                        keluarga
+                        tercinta.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                        <a href="pages/halaman-awal/login.php"
+                            class="inline-flex items-center justify-center px-8 py-3.5 rounded-xl bg-white hover:bg-indigo-50 text-indigo-900 font-bold text-sm shadow-lg transition-all transform hover:-translate-y-0.5">
+                            <i class="fa-solid fa-rocket mr-2 text-indigo-600"></i> Rasakan Kemudahannya Sekarang
+                        </a>
+                        <span class="text-xs text-indigo-200 text-center sm:text-left">
+                            <i class="fa-solid fa-circle-check text-indigo-300 mr-1"></i> Gratis uji coba, tanpa
+                            risiko
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Dirancang dengan
+                    Standar
+                    Profesional</h2>
+                <p class="mt-4 text-slate-700 dark:text-slate-200">Keunggulan arsitektur sistem kami untuk
+                    memastikan
+                    bisnis Anda berjalan stabil, cepat, dan siap berkembang.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div
+                    class="p-8 rounded-2xl bg-indigo-50/40 dark:bg-slate-800/50 border border-indigo-100 dark:border-slate-700 hover:border-indigo-400 dark:hover:border-indigo-500 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-indigo-100 dark:bg-slate-700 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-xl font-bold mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-all shadow-sm">
+                        <i class="fa-solid fa-gauge-high"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 flex items-center gap-2">
+                        <span>Efisiensi Koding Tinggi</span> ⚡
+                    </h3>
+                    <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">Struktur 12 tabel inti
+                        yang
+                        proporsional meminimalkan kompleksitas query SQL dan mempercepat performa aplikasi.</p>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="p-8 rounded-2xl bg-indigo-50/40 dark:bg-slate-800/50 border border-indigo-100 dark:border-slate-700 hover:border-indigo-400 dark:hover:border-indigo-500 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-indigo-100 dark:bg-slate-700 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-xl font-bold mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-all shadow-sm">
+                        <i class="fa-solid fa-code-branch"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 flex items-center gap-2">
+                        <span>Konsistensi Relasi Cabang</span> 🔗
+                    </h3>
+                    <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">Seluruh data operasional
+                        terhubung langsung dengan ID toko untuk penyaringan laporan per cabang yang akurat.</p>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="p-8 rounded-2xl bg-indigo-50/40 dark:bg-slate-800/50 border border-indigo-100 dark:border-slate-700 hover:border-indigo-400 dark:hover:border-indigo-500 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-indigo-100 dark:bg-slate-700 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-xl font-bold mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-all shadow-sm">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 flex items-center gap-2">
+                        <span>Fleksibilitas Fitur</span> 🛠️
+                    </h3>
+                    <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">Fitur canggih seperti stok
+                        resep dan QR order berbasis kolom opsional, aman untuk semua paket langganan.</p>
+                </div>
+                <!-- Card 4 -->
+                <div
+                    class="p-8 rounded-2xl bg-indigo-50/40 dark:bg-slate-800/50 border border-indigo-100 dark:border-slate-700 hover:border-indigo-400 dark:hover:border-indigo-500 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-indigo-100 dark:bg-slate-700 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-xl font-bold mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-all shadow-sm">
+                        <i class="fa-solid fa-receipt"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 flex items-center gap-2">
+                        <span>Struk Profesional</span> 📄
+                    </h3>
+                    <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">Pemisahan data Header dan
+                        Detail transaksi memastikan pembelian multi-item tersimpan rapi dan siap didownload kapan
+                        saja.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perbandingan Sebelum vs Sesudah RINFIS -->
+    <section id="transformasi"
+        class="py-20 bg-indigo-50/30 dark:bg-slate-800/30 border-b border-indigo-100 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span
+                    class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-50 dark:bg-slate-800 border border-indigo-200 dark:border-slate-700 text-indigo-700 dark:text-indigo-300 text-xs font-semibold mb-4">
+                    <i class="fa-solid fa-arrows-split-up-and-left"></i> Transformasi Bisnis Anda
+                </span>
+                <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                    Hidup Lebih Tenang, Toko Tetap Berkembang
+                </h2>
+                <p class="mt-4 text-slate-700 dark:text-slate-200">
+                    Lihat bagaimana RINFIS mengubah total rutinitas harian pengelola usaha dari melelahkan menjadi
+                    serba
+                    otomatis.
+                </p>
+            </div>
+
+            <!-- Grid Perbandingan -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+
+                <!-- Tanpa RINFIS -->
+                <div
+                    class="bg-rose-50/50 dark:bg-slate-800/40 rounded-3xl p-8 sm:p-10 border border-rose-200 dark:border-slate-700 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-6">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-rose-100 dark:bg-rose-950/60 text-rose-600 dark:text-rose-400 flex items-center justify-center font-bold text-lg">
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Tanpa RINFIS (Cara Manual)
+                                ❌
+                            </h3>
+                        </div>
+                        <ul class="space-y-4 text-slate-800 dark:text-slate-200">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-circle-xmark text-rose-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Pulang malam</strong> hanya untuk menghitung ulang catatan kertas
+                                    penjualan yang menumpuk.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-circle-xmark text-rose-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Pusing rekap manual</strong> dan sering kebingungan mencocokkan barang
+                                    keluar.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-circle-xmark text-rose-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Selisih kas nombok sendiri</strong> karena salah hitung kembalian atau
+                                    catatan terlupa.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-circle-xmark text-rose-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Stres mikirin stok</strong> barang yang tiba-tiba habis tanpa
+                                    disadari.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="mt-8 pt-6 border-t border-rose-200/60 dark:border-slate-700 text-xs font-semibold text-rose-700 dark:text-rose-400 uppercase tracking-wider">
+                        Waktu habis, tenaga terkuras, risiko rugi besar
+                    </div>
+                </div>
+
+                <!-- Dengan RINFIS -->
+                <div
+                    class="bg-white dark:bg-slate-800 rounded-3xl p-8 sm:p-10 border-2 border-indigo-600 dark:border-indigo-500 shadow-xl relative flex flex-col justify-between hover:shadow-2xl transition">
+                    <div
+                        class="absolute -top-3.5 right-8 bg-indigo-600 text-white text-xs font-bold uppercase tracking-wider py-1 px-3 rounded-full shadow-sm">
+                        ⭐ Pilihan Cerdas
+                    </div>
+                    <div>
+                        <div class="flex items-center space-x-3 mb-6">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-bold text-lg shadow-md shadow-indigo-200 dark:shadow-none">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Dengan RINFIS (Otomatis) ✨
+                            </h3>
+                        </div>
+                        <ul class="space-y-4 text-slate-800 dark:text-slate-200">
+                            <li class="flex items-start">
+                                <i
+                                    class="fa-solid fa-circle-check text-indigo-600 dark:text-indigo-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Tutup toko tepat waktu</strong> dan bisa menikmati malam bersama
+                                    keluarga
+                                    tercinta.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i
+                                    class="fa-solid fa-circle-check text-indigo-600 dark:text-indigo-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Laporan rekap otomatis di HP</strong>, bisa dipantau kapan saja dan di
+                                    mana saja secara real-time.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i
+                                    class="fa-solid fa-circle-check text-indigo-600 dark:text-indigo-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Uang kas 100% akurat</strong> tanpa rasa cemas ada selisih uang yang
+                                    hilang.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i
+                                    class="fa-solid fa-circle-check text-indigo-600 dark:text-indigo-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Tidur nyenyak</strong> karena sistem mencatat stok dan transaksi
+                                    dengan
+                                    aman.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="mt-8 pt-6 border-t border-indigo-100 dark:border-slate-700 text-xs font-semibold text-indigo-700 dark:text-indigo-300 uppercase tracking-wider">
+                        Bisnis terkontrol, pikiran tenang, omzet naik
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Kalkulator Komprehensif -->
+    <section id="kalkulator"
+        class="py-20 bg-white dark:bg-slate-900 border-b border-indigo-100 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div
+                class="bg-gradient-to-br from-indigo-500/10 via-indigo-50/50 to-white dark:from-indigo-500/5 dark:via-slate-800 dark:to-slate-900 rounded-3xl p-8 sm:p-12 border border-indigo-200/60 dark:border-slate-700 shadow-xl">
+
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <span
+                        class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-100 dark:bg-indigo-950/60 text-indigo-800 dark:text-indigo-300 text-xs font-bold uppercase tracking-wider mb-4 border border-indigo-200 dark:border-indigo-800">
+                        <i class="fa-solid fa-calculator"></i> Simulasi Analisis Keuangan & Efisiensi
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                        Kalkulator Dampak Sistem RINFIS 📊
+                    </h2>
+                    <p class="mt-3 text-sm sm:text-base text-slate-700 dark:text-slate-200">
+                        Hitung proyeksi omzet, estimasi kebocoran kas manual, serta jam kerja yang bisa diselamatkan
+                        oleh sistem otomatis.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+                    <!-- Kolom Input (7 Kolom) -->
+                    <div
+                        class="lg:col-span-7 bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-indigo-100 dark:border-slate-700 shadow-sm space-y-5">
+                        <div>
+                            <label for="transaksi"
+                                class="block text-sm font-semibold text-slate-800 dark:text-slate-200 mb-2">
+                                🧾 Jumlah Transaksi (Struk) <span class="text-xs font-normal text-slate-500">/
+                                    hari</span>
+                            </label>
+                            <input type="number" id="transaksi" value="25" min="0"
+                                class="w-full px-4 py-3.5 rounded-xl bg-indigo-50/50 dark:bg-slate-900 border border-indigo-200 dark:border-slate-700 text-slate-900 dark:text-white font-bold text-base focus:outline-none focus:ring-2 focus:ring-indigo-600 transition">
+                        </div>
+
+                        <div>
+                            <label for="avgHarga"
+                                class="block text-sm font-semibold text-slate-800 dark:text-slate-200 mb-2">
+                                💰 Rata-rata Nilai per Struk
+                            </label>
+                            <div class="relative">
+                                <div
+                                    class="absolute left-4 top-1/2 -translate-y-1/2 text-sm font-semibold text-slate-500">
+                                    Rp</div>
+                                <input type="number" id="avgHarga" value="75000" min="0" step="500"
+                                    class="w-full pl-12 pr-4 py-3.5 rounded-xl bg-indigo-50/50 dark:bg-slate-900 border border-indigo-200 dark:border-slate-700 text-slate-900 dark:text-white font-bold text-base focus:outline-none focus:ring-2 focus:ring-indigo-600 transition">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="hppRate"
+                                class="block text-sm font-semibold text-slate-800 dark:text-slate-200 mb-2">
+                                📦 Estimasi Modal / HPP Produk <span class="text-xs font-normal text-slate-500">(%
+                                    dari
+                                    omzet)</span>
+                            </label>
+                            <div class="relative">
+                                <input type="number" id="hppRate" value="60" min="0" max="95" step="1"
+                                    class="w-full px-4 py-3.5 rounded-xl bg-indigo-50/50 dark:bg-slate-900 border border-indigo-200 dark:border-slate-700 text-slate-900 dark:text-white font-bold text-base focus:outline-none focus:ring-2 focus:ring-indigo-600 transition">
+                                <div
+                                    class="absolute right-4 top-1/2 -translate-y-1/2 text-sm font-semibold text-slate-500">
+                                    %</div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="manualHours"
+                                class="block text-sm font-semibold text-slate-800 dark:text-slate-200 mb-2">
+                                ⏳ Waktu Habis untuk Rekap Manual <span class="text-xs font-normal text-slate-500">(Jam /
+                                    hari)</span>
+                            </label>
+                            <input type="number" id="manualHours" value="1.5" min="0" max="5" step="0.5"
+                                class="w-full px-4 py-3.5 rounded-xl bg-indigo-50/50 dark:bg-slate-900 border border-indigo-200 dark:border-slate-700 text-slate-900 dark:text-white font-bold text-base focus:outline-none focus:ring-2 focus:ring-indigo-600 transition">
+                        </div>
+
+                        <div>
+                            <label for="errorRate"
+                                class="block text-sm font-semibold text-slate-800 dark:text-slate-200 mb-2">
+                                ⚠️ Estimasi Risiko Selisih Kas Manual <span
+                                    class="text-xs font-normal text-slate-500">(%)</span>
+                            </label>
+                            <div class="relative">
+                                <input type="number" id="errorRate" value="1.0" min="0" max="5" step="0.1"
+                                    class="w-full px-4 py-3.5 rounded-xl bg-indigo-50/50 dark:bg-slate-900 border border-indigo-200 dark:border-slate-700 text-slate-900 dark:text-white font-bold text-base focus:outline-none focus:ring-2 focus:ring-indigo-600 transition">
+                                <div
+                                    class="absolute right-4 top-1/2 -translate-y-1/2 text-sm font-semibold text-slate-500">
+                                    %</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kolom Hasil Ringkasan (5 Kolom) -->
+                    <div
+                        class="lg:col-span-5 bg-indigo-50/80 dark:bg-slate-900/90 rounded-2xl p-6 sm:p-8 border border-indigo-200 dark:border-indigo-900/50 flex flex-col justify-between space-y-6">
+                        <div>
+                            <h3
+                                class="text-base font-bold text-slate-900 dark:text-white mb-4 border-b border-indigo-200 dark:border-slate-800 pb-3 flex items-center justify-between">
+                                <span>📈 Proyeksi Bulanan (30 Hari)</span>
+                                <i class="fa-solid fa-chart-line text-indigo-600 dark:text-indigo-400"></i>
+                            </h3>
+
+                            <div class="space-y-4">
+                                <div
+                                    class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-indigo-100 dark:border-slate-700 shadow-sm">
+                                    <div
+                                        class="text-xs font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-wider mb-1">
+                                        💼 Estimasi Omzet Kotor</div>
+                                    <div id="resultOmzet"
+                                        class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">Rp
+                                        0
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-emerald-100 dark:border-slate-700 shadow-sm border-l-4 border-l-emerald-500">
+                                    <div
+                                        class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-1">
+                                        💵 Estimasi Laba Kotor (Profit)</div>
+                                    <div id="resultProfit"
+                                        class="text-xl sm:text-2xl font-extrabold text-emerald-600 dark:text-emerald-400">
+                                        Rp 0</div>
+                                </div>
+
+                                <div
+                                    class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-rose-100 dark:border-slate-700 shadow-sm border-l-4 border-l-rose-500">
+                                    <div
+                                        class="text-xs font-semibold text-rose-600 dark:text-rose-400 uppercase tracking-wider mb-1">
+                                        ⚠️ Potensi Kebocoran Kas / Selisih</div>
+                                    <div id="resultLoss"
+                                        class="text-xl sm:text-2xl font-extrabold text-rose-600 dark:text-rose-400">
+                                        Rp 0
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-amber-100 dark:border-slate-700 shadow-sm border-l-4 border-l-amber-500">
+                                    <div
+                                        class="text-xs font-semibold text-amber-600 dark:text-amber-400 uppercase tracking-wider mb-1">
+                                        ⏳ Waktu Rekap yang Diselamatkan</div>
+                                    <div id="resultTime"
+                                        class="text-xl sm:text-2xl font-extrabold text-amber-600 dark:text-amber-400">
+                                        0
+                                        Jam</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#harga"
+                            class="w-full py-3.5 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm text-center shadow-md shadow-indigo-200 dark:shadow-none transition flex items-center justify-center">
+                            <i class="fa-solid fa-circle-check mr-2"></i> Lindungi Bisnis Anda Sekarang
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Artikel & Cerita Pendek -->
+    <section id="artikel"
+        class="py-20 bg-white dark:bg-slate-900 border-b border-indigo-100 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span
+                    class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-50 dark:bg-slate-800 border border-indigo-200 dark:border-slate-700 text-indigo-700 dark:text-indigo-300 text-xs font-semibold mb-4">
+                    <i class="fa-solid fa-book-open"></i> Wawasan & Cerita UMKM
+                </span>
+                <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                    Sudut Pandang & Arti Kehadiran RINFIS
+                </h2>
+                <p class="mt-4 text-slate-700 dark:text-slate-200">
+                    Bagaimana teknologi kasir modern membawa ketenangan bagi pemilik bisnis, kenyamanan bagi
+                    pelanggan,
+                    serta kebahagiaan bagi tim di toko.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Artikel 1 -->
+                <article
+                    class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+
+                    <img src="assets/img/artikel/kelola kas.jpg" class="w-full h-56 object-cover" alt="Cara Mengelola Kas UMKM">
+
+                    <div class="p-6">
+
+                        <span class="text-xs font-semibold text-indigo-600 uppercase">
+                            Keuangan
+                        </span>
+
+                        <h3 class="mt-3 text-xl font-bold">
+                            5 Cara Mengelola Kas UMKM Agar Tidak Bocor
+                        </h3>
+
+                        <p class="mt-3 text-slate-600 dark:text-slate-300 text-sm">
+                            Pelajari cara sederhana mengontrol pemasukan,
+                            pengeluaran, dan stok agar keuntungan usaha
+                            tetap maksimal setiap hari.
+                        </p>
+
+                        <div class="mt-6 flex justify-between items-center">
+
+                            <small class="text-slate-500">
+                                4 Agustus 2026
+                            </small>
+
+                            <a href="pages/halaman-artikel/artikel_mengelola-kas-umkm.html" class="text-indigo-600 font-semibold">
+                                Baca →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Artikel 2 -->
+                <article
+                    class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+
+                    <img src="assets/img/artikel/qr.png" class="w-full h-56 object-cover" alt="QR Order">
+
+                    <div class="p-6">
+
+                        <span class="text-xs font-semibold text-green-600 uppercase">
+                            Teknologi
+                        </span>
+
+                        <h3 class="mt-3 text-xl font-bold">
+                            Apa Itu QR Order dan Mengapa UMKM Wajib Memakainya?
+                        </h3>
+
+                        <p class="mt-3 text-slate-600 dark:text-slate-300 text-sm">
+                            QR Order mempercepat pelayanan pelanggan,
+                            mengurangi antrean, serta membuat proses
+                            pemesanan menjadi lebih praktis.
+                        </p>
+
+                        <div class="mt-6 flex justify-between items-center">
+
+                            <small class="text-slate-500">
+                                28 Juli 2026
+                            </small>
+
+                            <a href="pages/halaman-artikel/artikel_qr-order.html" class="text-indigo-600 font-semibold">
+                                Baca →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Artikel 3 -->
+                <article
+                    class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+
+                    <img src="assets/img/artikel/gudang.jpg" class="w-full h-56 object-cover" alt="Stok Barang">
+
+                    <div class="p-6">
+
+                        <span class="text-xs font-semibold text-rose-600 uppercase">
+                            Stok
+                        </span>
+
+                        <h3 class="mt-3 text-xl font-bold">
+                            Kesalahan Stok yang Sering Dilakukan Pemilik Warung
+                        </h3>
+
+                        <p class="mt-3 text-slate-600 dark:text-slate-300 text-sm">
+                            Banyak UMKM kehilangan keuntungan bukan karena
+                            sepi pembeli, tetapi karena stok tidak tercatat
+                            dengan baik.
+                        </p>
+
+                        <div class="mt-6 flex justify-between items-center">
+
+                            <small class="text-slate-500">
+                                20 Juli 2026
+                            </small>
+
+                            <a href="pages/halaman-artikel/artikel_stok-barang.html" class="text-indigo-600 font-semibold">
+                                Baca →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing & Feature Comparison Section -->
+    <section id="harga" class="py-20 bg-indigo-50/30 dark:bg-slate-800/30 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Pilih Paket Sesuai
+                    Kebutuhan Bisnis 🎯</h2>
+                <p class="mt-4 text-slate-700 dark:text-slate-200">Transparan, tanpa biaya tersembunyi. Upgrade atau
+                    downgrade kapan saja.</p>
+            </div>
+
+            <!-- Pricing Cards Grid (4 Kolom: Free, Premium, Bisnis, Enterprise) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <!-- Free Plan -->
+                <div
+                    class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-indigo-100 dark:border-slate-700 shadow-sm flex flex-col justify-between hover:shadow-lg hover:-translate-y-1 transition duration-300">
+                    <div>
+                        <div
+                            class="text-sm font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-wider mb-2">
+                            🌱 Free</div>
+                        <div class="text-3xl font-extrabold text-slate-900 dark:text-white mb-6">Rp0 <span
+                                class="text-sm font-normal text-slate-600 dark:text-slate-300">/ selamanya</span>
+                        </div>
+                        <p class="text-sm text-slate-700 dark:text-slate-200 mb-6">Cocok untuk usaha rintisan atau
+                            UMKM
+                            skala kecil yang baru memulai.</p>
+                        <ul class="space-y-3.5 text-sm text-slate-800 dark:text-slate-200 mb-8">
+                            <li class="flex items-center"><i
+                                    class="fa-solid fa-check text-indigo-600 dark:text-indigo-400 mr-3"></i> 1 Toko
+                            </li>
+                            <li class="flex items-center"><i
+                                    class="fa-solid fa-check text-indigo-600 dark:text-indigo-400 mr-3"></i> Maks.
+                                30
+                                Produk</li>
+                            <li class="flex items-center"><i
+                                    class="fa-solid fa-check text-indigo-600 dark:text-indigo-400 mr-3"></i> 200
+                                Transaksi / hari</li>
+                            <li class="flex items-center"><i
+                                    class="fa-solid fa-check text-indigo-600 dark:text-indigo-400 mr-3"></i> Export
+                                PDF
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="pages/halaman-awal/login.php"
+                        class="w-full py-3 px-4 rounded-xl bg-indigo-50 dark:bg-slate-700 hover:bg-indigo-100 dark:hover:bg-slate-600 text-indigo-700 dark:text-indigo-300 font-semibold text-center text-sm transition">Mulai
+                        Paket Free</a>
+                </div>
+
+                <!-- Premium Plan -->
+                <div
+                    class="bg-white dark:bg-slate-800 rounded-2xl p-6 border-2 border-indigo-600 dark:border-indigo-500 shadow-xl relative flex flex-col justify-between hover:shadow-2xl hover:-translate-y-1 transition duration-300">
+                    <div
+                        class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-indigo-600 text-white text-xs font-bold uppercase tracking-wider py-1 px-3 rounded-full shadow-sm">
+                        🔥 Terpopuler
+                    </div>
+                    <div>
+                        <div
+                            class="text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider mb-2">
+                            ⭐ Premium</div>
+                        <div class="text-3xl font-extrabold text-slate-900 dark:text-white mb-6">Rp50.000 <span
+                                class="text-sm font-normal text-slate-600 dark:text-slate-300">/ bulan</span></div>
+                        <p class="text-sm text-slate-700 dark:text-slate-200 mb-6">Fitur lengkap untuk bisnis yang
+                            sedang berkembang pesat.</p>
+                        <ul class="space-y-3.5 text-sm text-slate-800 dark:text-slate-200 mb-8">
+                            <li class="flex items-center"><i
+                                    class="fa-solid fa-check text-indigo-600 dark:text-indigo-400 mr-3"></i> 1 Toko
+                            </li>
+                            <li class="flex items-center"><i
+                                    class="fa-solid fa-check text-indigo-600 dark:text-indigo-400 mr-3"></i> Produk
+                                Tidak Terbatas</li>
+                            <li class="flex items-center"><i
+                                    class="fa-solid fa-check text-indigo-600 dark:text-indigo-400 mr-3"></i>
+                                Transaksi
+                                Tidak Terbatas</li>
+                            <li class="flex items-center"><i
+                                    class="fa-solid fa-check text-indigo-600 dark:text-indigo-400 mr-3"></i> Stok
+                                Otomatis & Riwayat Mutasi</li>
+                            <li class="flex items-center"><i
+                                    class="fa-solid fa-check text-indigo-600 dark:text-indigo-400 mr-3"></i> QR
+                                Order
+                                untuk Pelanggan</li>
+                            <li class="flex items-center"><i
+                                    class="fa-solid fa-check text-indigo-600 dark:text-indigo-400 mr-3"></i> Export
+                                PDF
+                                & Excel</li>
+                        </ul>
+                    </div>
+                    <a href="pages/halaman-awal/login.php"
+                        class="w-full py-3 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-center text-sm shadow-md shadow-indigo-200 dark:shadow-none transition">Pilih
+                        Paket Premium</a>
+                </div>
+
+                <!-- Bisnis Plan -->
+                <div
+                    class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-indigo-100 dark:border-slate-700 shadow-sm flex flex-col justify-between hover:shadow-lg hover:-translate-y-1 transition duration-300">
+                    <div>
+                        <div
+                            class="text-sm font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-wider mb-2">
+                            🏢 Bisnis</div>
+                        <div class="text-3xl font-extrabold text-slate-900 dark:text-white mb-6">Rp65.000 <span
+                                class="text-sm font-normal text-slate-600 dark:text-slate-300">/ bulan</span></div>
+                        <p class="text-sm text-slate-700 dark:text-slate-200 mb-6">Solusi maksimal untuk
+                            multi-cabang
+                            dan manajemen profesional.</p>
+                        <ul class="space-y-3.5 text-sm text-slate-800 dark:text-slate-200 mb-8">
+                            <li class="flex items-center"><i
+                                    class="fa-solid fa-check text-indigo-600 dark:text-indigo-400 mr-3"></i> Maks. 5
+                                Toko (Multi Cabang)</li>
+                            <li class="flex items-center"><i
+                                    class="fa-solid fa-check text-indigo-600 dark:text-indigo-400 mr-3"></i> Produk
+                                &
+                                Transaksi Tanpa Batas</li>
+                            <li class="flex items-center"><i
+                                    class="fa-solid fa-check text-indigo-600 dark:text-indigo-400 mr-3"></i> Hak
+                                Akses Owner Kasir</li>
+                        </ul>
+                    </div>
+                    <a href="pages/halaman-awal/login.php"
+                        class="w-full py-3 px-4 rounded-xl bg-indigo-50 dark:bg-slate-700 hover:bg-indigo-100 dark:hover:bg-slate-600 text-indigo-700 dark:text-indigo-300 font-semibold text-center text-sm transition">Pilih
+                        Paket Bisnis</a>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div
+                    class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-indigo-100 dark:border-slate-700 shadow-sm flex flex-col justify-between hover:shadow-lg hover:-translate-y-1 transition duration-300">
+                    <div>
+                        <div
+                            class="text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider mb-2">
+                            🌈 Enterprise</div>
+                        <div class="text-3xl font-extrabold text-slate-900 dark:text-white mb-6">Rp75.000 <span
+                                class="text-sm font-normal text-slate-600 dark:text-slate-300">/ bulan</span></div>
+                        <p class="text-sm text-slate-700 dark:text-slate-200 mb-6">Skala enterprise lengkap untuk
+                            manajemen multi-cabang skala besar.</p>
+                        <ul class="space-y-3.5 text-sm text-slate-800 dark:text-slate-200 mb-8">
+                            <li class="flex items-center"><i
+                                    class="fa-solid fa-check text-indigo-600 dark:text-indigo-400 mr-3"></i> Maks.
+                                10 Toko (Multi Cabang)</li>
+                            <li class="flex items-center"><i
+                                    class="fa-solid fa-check text-indigo-600 dark:text-indigo-400 mr-3"></i> Produk
+                                & Transaksi Tanpa Batas</li>
+                            <li class="flex items-center"><i
+                                    class="fa-solid fa-check text-indigo-600 dark:text-indigo-400 mr-3"></i> Grafik
+                                Penjualan & Laporan per Toko</li>
+                            <li class="flex items-center"><i
+                                    class="fa-solid fa-check text-indigo-600 dark:text-indigo-400 mr-3"></i> Multi
+                                Kasir & Hak Akses Owner</li>
+                        </ul>
+                    </div>
+                    <a href="pages/halaman-awal/login.php"
+                        class="w-full py-3 px-4 rounded-xl bg-indigo-50 dark:bg-slate-700 hover:bg-indigo-100 dark:hover:bg-slate-600 text-indigo-700 dark:text-indigo-300 font-semibold text-center text-sm transition">Pilih
+                        Paket Enterprise</a>
+                </div>
+            </div>
+
+            <!-- Detailed Comparison Table -->
+            <div
+                class="bg-white dark:bg-slate-800 rounded-2xl border border-indigo-100 dark:border-slate-700 overflow-hidden shadow-sm">
+                <div class="p-6 bg-indigo-50/50 dark:bg-slate-700/50 border-b border-indigo-100 dark:border-slate-700">
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">Perbandingan Fitur Lengkap</h3>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse text-sm">
+                        <thead>
+                            <tr
+                                class="border-b border-indigo-100 dark:border-slate-700 text-slate-600 dark:text-slate-300 bg-indigo-50/30 dark:bg-slate-800/80">
+                                <th class="py-4 px-6 font-semibold">Fitur</th>
+                                <th class="py-4 px-6 font-semibold text-center">Free</th>
+                                <th class="py-4 px-6 font-semibold text-center text-indigo-600 dark:text-indigo-400">
+                                    Premium</th>
+                                <th class="py-4 px-6 font-semibold text-center">Bisnis</th>
+                                <th class="py-4 px-6 font-semibold text-center text-indigo-600 dark:text-indigo-400">
+                                    Enterprise</th>
+                            </tr>
+                        </thead>
+                        <tbody
+                            class="divide-y divide-slate-100 dark:divide-slate-700 text-slate-800 dark:text-slate-200">
+                            <tr>
+                                <td class="py-4 px-6 font-medium">Jumlah Toko</td>
+                                <td class="py-4 px-6 text-center">1</td>
+                                <td class="py-4 px-6 text-center font-semibold text-indigo-600 dark:text-indigo-400">
+                                    1</td>
+                                <td class="py-4 px-6 text-center">Maks. 5</td>
+                                <td class="py-4 px-6 text-center font-semibold text-indigo-600 dark:text-indigo-400">
+                                    Maks. 10</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-6 font-medium">Jumlah Produk</td>
+                                <td class="py-4 px-6 text-center">30</td>
+                                <td class="py-4 px-6 text-center font-semibold text-indigo-600 dark:text-indigo-400">
+                                    Tidak terbatas</td>
+                                <td class="py-4 px-6 text-center">Tidak terbatas</td>
+                                <td class="py-4 px-6 text-center font-semibold text-indigo-600 dark:text-indigo-400">
+                                    Tidak terbatas</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-6 font-medium">Jumlah Transaksi</td>
+                                <td class="py-4 px-6 text-center">200/hari</td>
+                                <td class="py-4 px-6 text-center font-semibold text-indigo-600 dark:text-indigo-400">
+                                    Tidak terbatas</td>
+                                <td class="py-4 px-6 text-center">Tidak terbatas</td>
+                                <td class="py-4 px-6 text-center font-semibold text-indigo-600 dark:text-indigo-400">
+                                    Tidak terbatas</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-6 font-medium">Stok Otomatis</td>
+                                <td class="py-4 px-6 text-center text-slate-400">✕</td>
+                                <td class="py-4 px-6 text-center text-indigo-600 dark:text-indigo-400 font-bold">✓
+                                </td>
+                                <td class="py-4 px-6 text-center text-indigo-600 dark:text-indigo-400 font-bold">✓
+                                </td>
+                                <td class="py-4 px-6 text-center text-indigo-600 dark:text-indigo-400 font-bold">✓
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-6 font-medium">QR Order untuk Pelanggan Memesan</td>
+                                <td class="py-4 px-6 text-center text-slate-400">✕</td>
+                                <td class="py-4 px-6 text-center text-indigo-600 dark:text-indigo-400 font-bold">✓
+                                </td>
+                                <td class="py-4 px-6 text-center text-indigo-600 dark:text-indigo-400 font-bold">✓
+                                </td>
+                                <td class="py-4 px-6 text-center text-indigo-600 dark:text-indigo-400 font-bold">✓
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-6 font-medium">Riwayat Mutasi</td>
+                                <td class="py-4 px-6 text-center text-slate-400">✕</td>
+                                <td class="py-4 px-6 text-center text-indigo-600 dark:text-indigo-400 font-bold">✓
+                                </td>
+                                <td class="py-4 px-6 text-center text-indigo-600 dark:text-indigo-400 font-bold">✓
+                                </td>
+                                <td class="py-4 px-6 text-center text-indigo-600 dark:text-indigo-400 font-bold">✓
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-6 font-medium">Export PDF</td>
+                                <td class="py-4 px-6 text-center text-indigo-600 dark:text-indigo-400 font-bold">✓
+                                </td>
+                                <td class="py-4 px-6 text-center text-indigo-600 dark:text-indigo-400 font-bold">✓
+                                </td>
+                                <td class="py-4 px-6 text-center text-indigo-600 dark:text-indigo-400 font-bold">✓
+                                </td>
+                                <td class="py-4 px-6 text-center text-indigo-600 dark:text-indigo-400 font-bold">✓
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-6 font-medium">Export Excel</td>
+                                <td class="py-4 px-6 text-center text-slate-400">✕</td>
+                                <td class="py-4 px-6 text-center text-indigo-600 dark:text-indigo-400 font-bold">✓
+                                </td>
+                                <td class="py-4 px-6 text-center text-indigo-600 dark:text-indigo-400 font-bold">✓
+                                </td>
+                                <td class="py-4 px-6 text-center text-indigo-600 dark:text-indigo-400 font-bold">✓
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-6 font-medium">Grafik Penjualan</td>
+                                <td class="py-4 px-6 text-center text-slate-400">✕</td>
+                                <td class="py-4 px-6 text-center text-slate-400">✕</td>
+                                <td class="py-4 px-6 text-center text-slate-400">✕</td>
+                                <td class="py-4 px-6 text-center text-indigo-600 dark:text-indigo-400 font-bold">✓
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-6 font-medium">Multi Kasir</td>
+                                <td class="py-4 px-6 text-center text-slate-400">✕</td>
+                                <td class="py-4 px-6 text-center text-slate-400">✕</td>
+                                <td class="py-4 px-6 text-center text-slate-400">✕</td>
+                                <td class="py-4 px-6 text-center text-indigo-600 dark:text-indigo-400 font-bold">✓
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-6 font-medium">Hak Akses Owner/Kasir</td>
+                                <td class="py-4 px-6 text-center text-slate-400">✕</td>
+                                <td class="py-4 px-6 text-center text-slate-400">✕</td>
+                                <td class="py-4 px-6 text-center text-indigo-600 dark:text-indigo-400 font-bold">✓
+                                </td>
+                                <td class="py-4 px-6 text-center text-indigo-600 dark:text-indigo-400 font-bold">✓
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian FAQ BERBASIS AI (RIFA AI FAQ) -->
+    <section id="faq"
+        class="py-20 bg-white dark:bg-slate-900 border-b border-indigo-100 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span
+                    class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-50 dark:bg-slate-800 border border-indigo-200 dark:border-slate-700 text-indigo-700 dark:text-indigo-300 text-xs font-semibold mb-4 shadow-sm">
+                    <i class="fa-solid fa-robot text-indigo-600 dark:text-indigo-400"></i> RIFA AI Assistant
+                </span>
+                <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                    Tanya Jawab Pintar dengan RIFA 🤖💬
+                </h2>
+                <p class="mt-4 text-slate-700 dark:text-slate-200 text-sm sm:text-base">
+                    Punya pertanyaan seputar RINFIS? Ketik apa saja langsung ke RIFA atau pilih topik instan di
+                    bawah
+                    ini!
+                </p>
+            </div>
+
+            <!-- AI Chat Container -->
+            <div
+                class="bg-gradient-to-b from-indigo-50/60 to-white dark:from-slate-800/80 dark:to-slate-900 rounded-3xl border border-indigo-200 dark:border-slate-700 shadow-xl overflow-hidden flex flex-col h-[500px]">
+
+                <!-- Header Chat AI -->
+                <div
+                    class="px-6 py-4 bg-white dark:bg-slate-800 border-b border-indigo-100 dark:border-slate-700 flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <div class="relative">
+                            <div
+                                class="w-10 h-10 rounded-xl overflow-hidden bg-indigo-600 flex items-center justify-center font-bold text-base shadow-md border border-indigo-100 dark:border-slate-700">
+                                <img src="assets/img/ai rifa/rifakece.png" alt="Profil RIFA AI" class="w-full h-full object-cover">
+                            </div>
+                            <span
+                                class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-white dark:border-slate-800 rounded-full"></span>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-bold text-slate-900 dark:text-white">RIFA (RINFIS Smart
+                                Assistant)
+                            </h3>
+                            <p class="text-xs text-emerald-600 dark:text-emerald-400 font-medium">Online • Siap
+                                membantu
+                                24/7</p>
+                        </div>
+                    </div>
+                    <button onclick="resetAiChat()"
+                        class="text-xs font-semibold text-slate-600 hover:text-indigo-600 dark:text-slate-300 dark:hover:text-indigo-400 transition"
+                        title="Muat ulang percakapan">
+                        <i class="fa-solid fa-rotate-right mr-1"></i> Reset Chat
+                    </button>
+                </div>
+
+                <!-- Area Pesan Chat -->
+                <div id="ai-chat-messages" class="flex-1 p-6 overflow-y-auto space-y-4 text-sm">
+                    <!-- Pesan Sambutan dari AI -->
+                    <div class="flex items-start space-x-3">
+                        <div
+                            class="w-8 h-8 rounded-lg overflow-hidden bg-indigo-600 flex-shrink-0 flex items-center justify-center text-xs font-bold shadow border border-indigo-100 dark:border-slate-700">
+                            <img src="assets/img/ai rifa/rifakece.png" alt="Profil RIFA AI" class="w-full h-full object-cover">
+                        </div>
+                        <div
+                            class="bg-white dark:bg-slate-800 text-slate-900 dark:text-white p-4 rounded-2xl rounded-tl-none border border-indigo-100 dark:border-slate-700 shadow-sm max-w-[85%] leading-relaxed">
+                            Halo! Saya <strong>RIFA</strong>, asisten virtual RINFIS. Ada yang ingin ditanyakan
+                            seputar
+                            fitur kasir, paket harga, atau cara kerja sistem kita hari ini? 😊
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tombol Prompt Cepat (Quick Suggestions) -->
+                <div
+                    class="px-6 py-2 bg-indigo-50/50 dark:bg-slate-800/40 border-t border-indigo-100 dark:border-slate-700/60 flex items-center gap-2 overflow-x-auto whitespace-nowrap text-xs">
+                    <span class="text-slate-500 font-medium mr-1">Sering ditanyakan:</span>
+                    <button onclick="askAiPreset('Bisa pakai gratis selamanya?')"
+                        class="px-3 py-1.5 rounded-lg bg-white dark:bg-slate-700 text-slate-800 dark:text-slate-100 border border-indigo-100 dark:border-slate-600 hover:bg-indigo-600 hover:text-white transition shadow-sm">
+                        🌿 Paket Free
+                    </button>
+                    <button onclick="askAiPreset('Bagaimana cara kerja QR Order?')"
+                        class="px-3 py-1.5 rounded-lg bg-white dark:bg-slate-700 text-slate-800 dark:text-slate-100 border border-indigo-100 dark:border-slate-600 hover:bg-indigo-600 hover:text-white transition shadow-sm">
+                        📱 QR Order Pelanggan
+                    </button>
+                    <button onclick="askAiPreset('Apakah data aman dan bisa di HP?')"
+                        class="px-3 py-1.5 rounded-lg bg-white dark:bg-slate-700 text-slate-800 dark:text-slate-100 border border-indigo-100 dark:border-slate-600 hover:bg-indigo-600 hover:text-white transition shadow-sm">
+                        🔒 Keamanan & Cloud HP
+                    </button>
+                    <button onclick="askAiPreset('Berapa harga paket multi-cabang?')"
+                        class="px-3 py-1.5 rounded-lg bg-white dark:bg-slate-700 text-slate-800 dark:text-slate-100 border border-indigo-100 dark:border-slate-600 hover:bg-indigo-600 hover:text-white transition shadow-sm">
+                        🏢 Paket Bisnis & Enterprise
+                    </button>
+                </div>
+
+                <!-- Input Chat Bar -->
+                <form onsubmit="handleAiSubmit(event)"
+                    class="p-4 bg-white dark:bg-slate-800 border-t border-indigo-100 dark:border-slate-700 flex items-center gap-3">
+                    <input type="text" id="ai-user-input" placeholder="Ketik pertanyaan Anda di sini..."
+                        autocomplete="off"
+                        class="flex-1 px-4 py-3 rounded-xl bg-indigo-50/50 dark:bg-slate-900 border border-indigo-200 dark:border-slate-700 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-600 transition">
+                    <button type="submit"
+                        class="w-12 h-12 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white flex items-center justify-center shadow-md shadow-indigo-200 dark:shadow-none transition transform active:scale-95 flex-shrink-0">
+                        <i class="fa-solid fa-paper-plane text-sm"></i>
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom CTA Section dengan Formulir Pendaftaran Cepat (Quick Signup) -->
+    <section
+        class="py-20 bg-indigo-600 dark:bg-indigo-900 text-white text-center transition-colors duration-300 shadow-inner relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <span
+                class="inline-block bg-indigo-500/50 text-indigo-100 text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full mb-4 border border-indigo-400/30">
+                ✨ Mulai Dalam 1 Menit
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">Siap Mengembangkan Bisnis Bersama
+                RINFIS? 🚀</h2>
+            <p class="text-indigo-100 text-lg mb-8 max-w-2xl mx-auto">Daftar sekarang secara gratis, tanpa kartu
+                kredit,
+                dan langsung nikmati kemudahan kelola toko.</p>
+
+            <!-- Formulir Pendaftaran Cepat (Quick Signup Form) -->
+            <form onsubmit="handleQuickSignup(event)"
+                class="max-w-xl mx-auto bg-white dark:bg-slate-800 p-3 sm:p-4 rounded-2xl shadow-xl flex flex-col sm:flex-row gap-3">
+                <input type="email" id="quickEmail" placeholder="Masukkan alamat email Anda..." required
+                    class="flex-1 px-4 py-3.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-indigo-100 dark:border-slate-700 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-600">
+                <button type="submit"
+                    class="px-6 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm shadow-md transition whitespace-nowrap">
+                    Coba Gratis <i class="fa-solid fa-arrow-right ml-1"></i>
+                </button>
+            </form>
+            <p id="signupAlert" class="text-xs text-indigo-200 mt-3 hidden">🎉 Pendaftaran berhasil! Mengalihkan ke
+                halaman setup...</p>
+        </div>
+    </section>
+
+    <!-- Tombol WhatsApp Melayang (Floating WhatsApp Button) -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/628112224984" target="_blank" rel="noopener noreferrer"
+            class="flex items-center justify-center w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full shadow-2xl hover:scale-110 transition-all duration-300 group"
+            title="Konsultasi via WhatsApp">
+            <i class="fa-brands fa-whatsapp text-2xl"></i>
+            <!-- Label kecil saat kursor mendekat -->
+            <span
+                class="absolute right-16 bg-slate-900 text-white text-xs font-semibold py-1.5 px-3 rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
+                Tanya CS RINFIS 💬
+            </span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer
+        class="bg-slate-900 dark:bg-slate-950 text-slate-300 py-12 border-t border-slate-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Bagian Utama Footer: Susunan Responsif Mobile & Desktop -->
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+                
+                <!-- Logo & Hak Cipta -->
+                <div class="flex flex-col items-center md:items-start space-y-3">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 rounded-lg overflow-hidden bg-white flex items-center justify-center">
+                            <img src="assets/img/logo/rinfisunguawal.png" alt="Logo RINFIS" class="w-full h-full object-cover">
+                        </div>
+                        <span class="text-white font-bold tracking-tight text-lg">RINFIS</span>
+                    </div>
+                    <p class="text-xs sm:text-sm">&copy; 2026 RINFIS. Hak Cipta Dilindungi.</p>
+                </div>
+
+                <!-- Bagian Instagram: Ikon & Teks Follow Us -->
+                <div class="flex flex-col items-center space-y-2">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-slate-200">Follow us on Instagram</span>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" 
+                        class="inline-flex items-center space-x-2 px-4 py-2 rounded-xl bg-slate-800/80 hover:bg-indigo-600 text-slate-200 hover:text-white border border-slate-700 hover:border-indigo-500 transition-all shadow-sm">
+                        <i class="fa-brands fa-instagram text-lg text-pink-400 group-hover:text-white"></i>
+                        <span class="text-xs font-medium">@rinfis.official</span>
+                    </a>
+                </div>
+
+                <!-- Navigasi Tautan Footer (Responsif) -->
+                <div class="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-xs sm:text-sm">
+                    <a href="pages/halaman-awal/login.php" class="hover:text-white transition">Login</a>
+                    <a href="#fitur" class="hover:text-white transition">Fitur</a>
+                    <a href="#transformasi" class="hover:text-white transition">Transformasi</a>
+                    <a href="#kalkulator" class="hover:text-white transition">Simulasi</a>
+                    <a href="#artikel" class="hover:text-white transition">Artikel</a>
+                    <a href="#harga" class="hover:text-white transition">Harga</a>
+                    <a href="#faq" class="hover:text-white transition">RIFA AI</a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Script JavaScript Terintegrasi -->
+    <script>
+        // Logika Toggle Dark/Light Mode
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const htmlRoot = document.getElementById('html-root');
+
+        // Pengecekan saved preference localStorage jika ada
+        if (localStorage.getItem('rinfis_theme') === 'dark') {
+            htmlRoot.classList.remove('light');
+            htmlRoot.classList.add('dark');
+            themeIcon.classList.remove('fa-sun', 'text-amber-500');
+            themeIcon.classList.add('fa-moon', 'text-indigo-300');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            if (htmlRoot.classList.contains('light')) {
+                htmlRoot.classList.remove('light');
+                htmlRoot.classList.add('dark');
+                themeIcon.classList.remove('fa-sun', 'text-amber-500');
+                themeIcon.classList.add('fa-moon', 'text-indigo-300');
+                localStorage.setItem('rinfis_theme', 'dark');
+            } else {
+                htmlRoot.classList.remove('dark');
+                htmlRoot.classList.add('light');
+                themeIcon.classList.remove('fa-moon', 'text-indigo-300');
+                themeIcon.classList.add('fa-sun', 'text-amber-500');
+                localStorage.setItem('rinfis_theme', 'light');
+            }
+        });
+
+        // Logika Kalkulator Komprehensif
+        const transaksiInput = document.getElementById('transaksi');
+        const avgHargaInput = document.getElementById('avgHarga');
+        const hppRateInput = document.getElementById('hppRate');
+        const manualHoursInput = document.getElementById('manualHours');
+        const errorRateInput = document.getElementById('errorRate');
+
+        const resultOmzet = document.getElementById('resultOmzet');
+        const resultProfit = document.getElementById('resultProfit');
+        const resultLoss = document.getElementById('resultLoss');
+        const resultTime = document.getElementById('resultTime');
+
+        function calculateBusinessMetrics() {
+            let transaksi = parseFloat(transaksiInput.value) || 0;
+            let avgHarga = parseFloat(avgHargaInput.value) || 0;
+            let hppRate = parseFloat(hppRateInput.value) || 0;
+            let manualHours = parseFloat(manualHoursInput.value) || 0;
+            let errorRate = parseFloat(errorRateInput.value) || 0;
+
+            let monthlyOmzet = transaksi * avgHarga * 30;
+            let monthlyProfit = monthlyOmzet * ((100 - hppRate) / 100);
+            let monthlyLoss = monthlyOmzet * (errorRate / 100);
+            let monthlyHours = manualHours * 30;
+
+            resultOmzet.textContent = "Rp " + Math.round(monthlyOmzet).toLocaleString('id-ID');
+            resultProfit.textContent = "Rp " + Math.round(monthlyProfit).toLocaleString('id-ID');
+            resultLoss.textContent = "Rp " + Math.round(monthlyLoss).toLocaleString('id-ID');
+            resultTime.textContent = Math.round(monthlyHours) + " Jam/bulan";
+        }
+
+        transaksiInput.addEventListener('input', calculateBusinessMetrics);
+        avgHargaInput.addEventListener('input', calculateBusinessMetrics);
+        hppRateInput.addEventListener('input', calculateBusinessMetrics);
+        manualHoursInput.addEventListener('input', calculateBusinessMetrics);
+        errorRateInput.addEventListener('input', calculateBusinessMetrics);
+
+        calculateBusinessMetrics();
+
+        // ----------------------------------------------------
+        // LOGIKA RIFA AI FAQ CHATBOT (DIPERBARUI)
+        // ----------------------------------------------------
+        const aiChatMessages = document.getElementById('ai-chat-messages');
+        const aiUserInput = document.getElementById('ai-user-input');
+
+        // Basis Pengetahuan (Knowledge Base) untuk RIFA AI yang Diperbarui
+        const knowledgeBase = [
+            {
+                keywords: ['gratis', 'free', 'percuma', 'biaya'],
+                answer: "Ya! RINFIS menyediakan <strong>Paket Free (Gratis) selamanya</strong> dengan batasan hingga 30 produk dan 200 transaksi per hari. Cocok untuk usaha rintisan atau UMKM skala kecil yang baru memulai."
+            },
+            {
+                keywords: ['qr', 'order', 'pesan', 'meja', 'scan'],
+                answer: "Fitur <strong>QR Order</strong> memungkinkan pelanggan memindai kode QR di meja untuk melihat menu dan memesan langsung dari ponsel mereka. Pesanan akan otomatis masuk ke sistem kasir tanpa perlu memanggil pelayan satu per satu (Tersedia mulai Paket Premium)."
+            },
+            {
+                keywords: ['aman', 'hp', 'cloud', 'handphone', 'akses', 'online', 'laptop'],
+                answer: "Sangat aman! Seluruh data transaksi dan stok tersimpan di server cloud terenkripsi. Anda bisa memantau laporan omzet dan mutasi barang secara real-time langsung melalui smartphone atau laptop di mana saja."
+            },
+            {
+                keywords: ['bisnis', 'cabang', 'multi', 'toko', 'banyak', 'enterprise'],
+                answer: "Untuk multi-cabang skala besar, Anda bisa memilih <strong>Paket Enterprise seharga Rp65.000/bulan</strong> yang mendukung hingga 10 toko sekaligus, produk tanpa batas, grafik penjualan, laporan per toko, serta multi-kasir."
+            },
+            {
+                keywords: ['premium', 'harga', '50000', 'bayar', 'fitur'],
+                answer: "<strong>Paket Premium</strong> tersedia seharga <strong>Rp50.000/bulan</strong> dengan produk & transaksi tanpa batas, stok otomatis, riwayat mutasi, QR Order, serta export Excel & PDF."
+            },
+            {
+                keywords: ['cetak', 'struk', 'printer', 'thermal', 'bluetooth'],
+                answer: "RINFIS mendukung pencetakan struk transaksi secara digital! Anda bisa langsung mendownload struk menggunakan printer thermal Bluetooth standar yang terhubung ke HP atau laptop Anda."
+            },
+            {
+                keywords: ['stok', 'barang', 'gudang', 'mutasi', 'keluar'],
+                answer: "Pengelolaan stok di RINFIS bersifat otomatis. Setiap kali terjadi transaksi penjualan, stok produk di sistem akan langsung terpotong secara akurat, lengkap dengan catatan riwayat mutasi barang masuk dan keluar."
+            },
+            {
+                keywords: ['laporan', 'keuangan', 'excel', 'pdf', 'rekap', 'omzet'],
+                answer: "Anda bisa mendownload laporan rekap penjualan, laba, dan transaksi kapan saja dalam format <strong>PDF atau Excel</strong> untuk memudahkan pembukuan atau audit keuangan bulanan."
+            },
+            {
+                keywords: ['daftar', 'mulai', 'buat', 'akun', 'registrasi'],
+                answer: "Cara mulainya sangat gampang! Cukup masukkan email Anda di kolom pendaftaran cepat di bagian bawah halaman ini atau klik tombol <strong>Coba Gratis</strong> di pojok kanan atas, dan toko Anda langsung siap digunakan dalam waktu kurang dari 2 menit."
+            },
+            {
+                keywords: ['ganti', 'pindah', 'upgrade', 'downgrade', 'paket'],
+                answer: "Tentu saja bisa! Anda bebas melakukan upgrade atau downgrade paket langganan kapan saja sesuai dengan perkembangan skala bisnis Anda tanpa khawatir kehilangan data toko."
+            },
+            {
+                keywords: ['terima kasih', 'terimakasih', 'makasih', 'thanks', 'thx', 'atur nuhun', 'suwun', 'thankyou', 'thank you'],
+                answer: "Sama-sama! Senang bisa membantu Anda. Jika ada hal lain seputar RINFIS atau fitur toko yang ingin ditanyakan lagi, jangan ragu untuk bilang ya! 😊"
+            },
+            {
+                keywords: ['kasir', 'karyawan', 'staff', 'akses', 'pemilik', 'owner'],
+                answer: "Pada Paket Bisnis dan Enterprise, Anda bisa mengatur hak akses yang berbeda antara <strong>Owner (Pemilik)</strong> dan <strong>Kasir</strong>. Pemilik memiliki kontrol penuh atas laporan keuangan & pengaturan toko, sementara kasir fokus melakukan input transaksi penjualan."
+            },
+            {
+                keywords: ['riwayat mutasi', 'mutasi', 'mutasi barang', 'mutasi stok'],
+                answer: "Riwayat mutasi adalah catatan lengkap atau log historis yang merekam setiap perubahan jumlah stok barang—baik penambahan (barang masuk dari supplier atau retur) maupun pengurangan (barang keluar karena penjualan atau rusak)—secara akurat dan transparan."
+            },
+            {
+                keywords: ['mau tanya', 'ingin tanya', 'boleh tanya', 'nanya dong', 'halo mau tanya'],
+                answer: "Tentu, silakan! Ada hal apa seputar RINFIS atau fitur kasir yang ingin Anda tanyakan? 😊"
+            },
+            {
+                keywords: ['hmm baiklah', 'baiklah', 'ok deh', 'oke deh', 'oh begitu'],
+                answer: "Baik! Jika nanti ada hal lain seputar RINFIS yang ingin didiskusikan atau ditanyakan lagi, jangan ragu untuk menyapa saya ya. Semoga harinya menyenangkan! 😊"
+            },
+            {
+                keywords: ['halo', 'hai', 'pagi', 'siang', 'malam', 'rifa', 'asisten'],
+                answer: "Halo juga! Saya RIFA, asisten virtual RINFIS. Ada hal spesifik seputar fitur kasir, harga, atau cara setup toko yang ingin Anda ketahui?"
+            }
+        ];
+
+        function getAiResponse(userQuery) {
+            const query = userQuery.toLowerCase();
+            for (let item of knowledgeBase) {
+                for (let keyword of item.keywords) {
+                    if (query.includes(keyword)) {
+                        return item.answer;
+                    }
+                }
+            }
+            return "Pertanyaan yang menarik! Untuk detail lebih mendalam seputar hal tersebut atau konsultasi langsung kebutuhan tokomu, kamu bisa klik tombol WhatsApp di pojok kanan bawah untuk terhubung langsung dengan tim support RINFIS ya! 😊";
+        }
+
+        function appendMessage(sender, text) {
+            const isUser = sender === 'user';
+            const wrapperDiv = document.createElement('div');
+            wrapperDiv.className = `flex items-start space-x-3 ${isUser ? 'flex-row-reverse space-x-reverse' : ''}`;
+
+            const avatarHTML = isUser
+                ? `<div class="w-8 h-8 rounded-lg bg-indigo-700 text-white flex-shrink-0 flex items-center justify-center text-xs font-bold shadow"><i class="fa-solid fa-user"></i></div>`
+                : `<div class="w-8 h-8 rounded-lg overflow-hidden bg-indigo-600 flex-shrink-0 flex items-center justify-center text-xs font-bold shadow border border-indigo-100 dark:border-slate-700"><img src="assets/img/ai rifa/rifakece.png" alt="Profil RIFA AI" class="w-full h-full object-cover"></div>`;
+
+            wrapperDiv.innerHTML = `
+                ${avatarHTML}
+                <div class="${isUser ? 'bg-indigo-600 text-white rounded-tr-none' : 'bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-indigo-100 dark:border-slate-700 rounded-tl-none'} p-4 rounded-2xl shadow-sm max-w-[85%] leading-relaxed text-sm">
+                    ${text}
+                </div>
+            `;
+            aiChatMessages.appendChild(wrapperDiv);
+            aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
+        }
+
+        function handleAiSubmit(event) {
+            event.preventDefault();
+            const text = aiUserInput.value.trim();
+            if (!text) return;
+
+            appendMessage('user', text);
+            aiUserInput.value = '';
+
+            // Tampilkan animasi "Sedang mengetik..." sebentar agar natural
+            const typingId = 'typing-' + Date.now();
+            const typingDiv = document.createElement('div');
+            typingDiv.id = typingId;
+            typingDiv.className = 'flex items-start space-x-3';
+            typingDiv.innerHTML = `
+                <div class="w-8 h-8 rounded-lg overflow-hidden bg-indigo-600 flex-shrink-0 flex items-center justify-center text-xs font-bold shadow border border-indigo-100 dark:border-slate-700">
+                    <img src="assets/img/ai rifa/rifakece.png" alt="Profil RIFA AI" class="w-full h-full object-cover">
+                </div>
+                <div class="bg-white dark:bg-slate-800 text-slate-400 p-4 rounded-2xl rounded-tl-none border border-indigo-100 dark:border-slate-700 shadow-sm text-xs italic">
+                    RIFA sedang mengetik<span class="animate-pulse">...</span>
+                </div>
+            `;
+            aiChatMessages.appendChild(typingDiv);
+            aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
+
+            setTimeout(() => {
+                document.getElementById(typingId).remove();
+                const reply = getAiResponse(text);
+                appendMessage('ai', reply);
+            }, 800);
+        }
+
+        function askAiPreset(questionText) {
+            aiUserInput.value = questionText;
+            // Kirim otomatis
+            const fakeEvent = { preventDefault: () => { } };
+            handleAiSubmit(fakeEvent);
+        }
+
+        function resetAiChat() {
+            aiChatMessages.innerHTML = `
+                <div class="flex items-start space-x-3">
+                    <div class="w-8 h-8 rounded-lg overflow-hidden bg-indigo-600 flex-shrink-0 flex items-center justify-center text-xs font-bold shadow border border-indigo-100 dark:border-slate-700">
+                        <img src="assets/img/ai rifa/rifakece.png" alt="Profil RIFA AI" class="w-full h-full object-cover">
+                    </div>
+                    <div class="bg-white dark:bg-slate-800 text-slate-900 dark:text-white p-4 rounded-2xl rounded-tl-none border border-indigo-100 dark:border-slate-700 shadow-sm max-w-[85%] leading-relaxed">
+                        Percakapan di-reset. Halo lagi! Ada yang bisa RIFA bantu seputar sistem RINFIS? ✨
+                    </div>
+                </div>
+            `;
+        }
+
+        // Simulasi Quick Signup Form
+        function handleQuickSignup(event) {
+            event.preventDefault();
+            const email = document.getElementById('quickEmail').value;
+            const alertBox = document.getElementById('signupAlert');
+
+            if (email) {
+                alertBox.classList.remove('hidden');
+                setTimeout(() => {
+                    window.location.href = 'pages/halaman-awal/login.php?email=' + encodeURIComponent(email);
+                }, 1500);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

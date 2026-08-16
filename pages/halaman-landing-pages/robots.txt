@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /pages/halaman-awal/login.php
+
+Sitemap: https://rinfis.infinityfreeapp.com/sitemap.xml

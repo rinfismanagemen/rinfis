@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="id" class="light" id="html-root">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kesalahan Stok yang Sering Dilakukan Pemilik Warung & Toko - RINFIS Blog</title>
+    <meta name="description"
+        content="Hindari 5 kesalahan fatal pengelolaan stok barang di toko kelontong, warung, dan cafe. Pelajari strategi pencatatan stok, FIFO, dan mutasi otomatis dengan RINFIS.">
+    <meta name="keywords"
+        content="stok barang warung, kesalahan stok umkm, manajemen gudang toko, opname stok otomatis, aplikasi kasir RINFIS">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://rinfis.infinityfreeapp.com/artikel/stok-barang.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Kesalahan Stok yang Sering Dilakukan Pemilik Warung">
+    <meta property="og:description"
+        content="Banyak UMKM kehilangan keuntungan bukan karena sepi pembeli, tetapi karena stok tidak tercatat dengan baik. Pahami cara mengatasinya!">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:url" content="https://rinfis.infinityfreeapp.com/artikel/stok-barang.html">
+
+    <!-- Schema.org BlogPosting -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Kesalahan Stok yang Sering Dilakukan Pemilik Warung",
+      "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80",
+      "author": {
+        "@type": "Organization",
+        "name": "Tim RINFIS"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "RINFIS",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://rinfis.infinityfreeapp.com/assets/img/logo/rinfisunguawal.png"
+        }
+      },
+      "datePublished": "2026-07-20",
+      "dateModified": "2026-08-04",
+      "description": "Panduan praktis mengelola stok barang dagangan toko kelontong dan warung agar terhindar dari kerugian akibat barang rusak atau hilang."
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = { darkMode: 'class' }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-white antialiased transition-colors duration-300">
+
+    <!-- Header / Navbar -->
+    <header
+        class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-indigo-100 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo & Kembali ke Beranda -->
+            <a href="../../index.html" class="flex items-center space-x-3 group">
+                <div
+                    class="w-10 h-10 rounded-xl overflow-hidden shadow-md shadow-indigo-200 dark:shadow-none bg-white flex items-center justify-center border border-indigo-100 dark:border-slate-700 group-hover:scale-105 transition-transform">
+                    <img src="../../assets/img/logo/rinfisunguawal.png"
+                        onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1556742049-0a6793a52c00?w=100&q=80';"
+                        alt="Logo RINFIS" class="w-full h-full object-cover">
+                </div>
+                <span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">RIN<span
+                        class="text-indigo-600 dark:text-indigo-400">FIS</span></span>
+            </a>
+
+            <!-- Navigation Action -->
+            <div class="flex items-center space-x-3">
+                <button id="theme-toggle" type="button"
+                    class="p-2.5 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-indigo-50 dark:hover:bg-slate-800 transition-all border border-indigo-100 dark:border-slate-700"
+                    title="Ubah Tema">
+                    <i id="theme-icon" class="fa-solid fa-sun text-sm text-amber-500"></i>
+                </button>
+                <a href="../../index.html"
+                    class="inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold shadow-md shadow-indigo-200 dark:shadow-none transition-all">
+                    <i class="fa-solid fa-arrow-left mr-2 text-xs"></i> Kembali ke Beranda
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Hero Banner -->
+    <section class="bg-white dark:bg-slate-900 border-b border-indigo-100 dark:border-slate-800 pt-8 pb-12">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Breadcrumbs -->
+            <nav class="flex items-center text-xs text-slate-500 dark:text-slate-400 mb-6 space-x-2">
+                <a href="../../index.html" class="hover:text-indigo-600 dark:hover:text-indigo-400">Beranda</a>
+                <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                <a href="../../index.html#artikel" class="hover:text-indigo-600 dark:hover:text-indigo-400">Artikel</a>
+                <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                <span class="text-indigo-600 dark:text-indigo-400 font-medium truncate">Apa Itu QR Order?</span>
+            </nav>
+
+            <span
+                class="inline-block px-3 py-1 rounded-full bg-rose-100 dark:bg-rose-950/80 text-rose-700 dark:text-rose-300 font-semibold text-xs uppercase tracking-wider mb-4 border border-rose-200 dark:border-rose-800">
+                📦 Manajemen Gudang & Stok
+            </span>
+
+            <h1
+                class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight mb-6">
+                Kesalahan Stok yang Sering Dilakukan Pemilik Warung
+            </h1>
+
+            <div
+                class="flex flex-wrap items-center justify-between gap-4 text-xs sm:text-sm text-slate-600 dark:text-slate-400 pb-6 border-b border-slate-200 dark:border-slate-800">
+                <div class="flex items-center space-x-3">
+                    <div
+                        class="w-10 h-10 rounded-full bg-rose-600 text-white flex items-center justify-center font-bold">
+                        <i class="fa-solid fa-boxes-stacked"></i>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-slate-900 dark:text-white">Tim Redaksi RINFIS</div>
+                        <div>Spesialis Manajemen Rantai Pasok UMKM</div>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <span><i class="fa-regular fa-calendar mr-1.5 text-rose-600 dark:text-rose-400"></i> 20 Juli
+                        2026</span>
+                    <span><i class="fa-regular fa-clock mr-1.5 text-rose-600 dark:text-rose-400"></i> 6 menit
+                        membaca</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Grid -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+            <!-- Sidebar Left -->
+            <aside class="lg:col-span-3 order-2 lg:order-1">
+                <div class="sticky top-28 space-y-6">
+                    <div
+                        class="bg-white dark:bg-slate-800 p-5 rounded-2xl border border-indigo-100 dark:border-slate-700 shadow-sm">
+                        <h3 class="text-sm font-bold text-slate-900 dark:text-white mb-3 flex items-center">
+                            <i class="fa-solid fa-list-ul mr-2 text-indigo-600 dark:text-indigo-400"></i> Daftar Isi
+                        </h3>
+                        <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300">
+                            <li><a href="#dampak-stok"
+                                    class="hover:text-indigo-600 dark:hover:text-indigo-400 block transition">1. Dampak
+                                    Buruk Buruknya Stok</a></li>
+                            <li><a href="#kesalahan-1"
+                                    class="hover:text-indigo-600 dark:hover:text-indigo-400 block transition">2. Tidak
+                                    Memakai Sistem FIFO</a></li>
+                            <li><a href="#kesalahan-2"
+                                    class="hover:text-indigo-600 dark:hover:text-indigo-400 block transition">3.
+                                    Menumpuk Barang Mati (Dead Stock)</a></li>
+                            <li><a href="#kesalahan-3"
+                                    class="hover:text-indigo-600 dark:hover:text-indigo-400 block transition">4. Jarang
+                                    Lakukan Stock Opname</a></li>
+                            <li><a href="#solusi-stok"
+                                    class="hover:text-indigo-600 dark:hover:text-indigo-400 block transition">5. Solusi
+                                    Riwayat Mutasi RINFIS</a></li>
+                            <li><a href="#kesimpulan"
+                                    class="hover:text-indigo-600 dark:hover:text-indigo-400 block transition">Kesimpulan</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Share -->
+                    <div
+                        class="bg-white dark:bg-slate-800 p-5 rounded-2xl border border-indigo-100 dark:border-slate-700 shadow-sm text-center">
+                        <span
+                            class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider block mb-3">Bagikan
+                            Artikel</span>
+                        <div class="flex justify-center items-center space-x-3">
+                            <a href="https://api.whatsapp.com/send?text=Kesalahan%20Stok%20yang%20Sering%20Dilakukan%20Pemilik%20Warung%20https://rinfis.infinityfreeapp.com/artikel/stok-barang.html"
+                                target="_blank"
+                                class="w-9 h-9 rounded-xl bg-emerald-500 text-white flex items-center justify-center hover:scale-105 transition">
+                                <i class="fa-brands fa-whatsapp text-sm"></i>
+                            </a>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://rinfis.infinityfreeapp.com/artikel/stok-barang.html"
+                                target="_blank"
+                                class="w-9 h-9 rounded-xl bg-blue-600 text-white flex items-center justify-center hover:scale-105 transition">
+                                <i class="fa-brands fa-facebook-f text-sm"></i>
+                            </a>
+                            <a href="https://twitter.com/intent/tweet?url=https://rinfis.infinityfreeapp.com/artikel/stok-barang.html"
+                                target="_blank"
+                                class="w-9 h-9 rounded-xl bg-sky-500 text-white flex items-center justify-center hover:scale-105 transition">
+                                <i class="fa-brands fa-x-twitter text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Article Body -->
+            <article
+                class="lg:col-span-9 order-1 lg:order-2 space-y-8 text-slate-700 dark:text-slate-300 leading-relaxed text-base">
+
+                <!-- Featured Image -->
+                <div class="rounded-3xl overflow-hidden border border-indigo-100 dark:border-slate-800 shadow-lg">
+                    <img src="../../assets/img/artikel/gudang.jpg"
+                        onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80';"
+                        alt="Manajemen Stok Warung UMKM" class="w-full h-80 sm:h-[420px] object-cover">
+                </div>
+
+                <!-- Intro Box -->
+                <div class="bg-rose-50/70 dark:bg-slate-800/60 p-6 rounded-2xl border-l-4 border-rose-500">
+                    <p class="font-medium text-slate-800 dark:text-slate-200">
+                        Banyak pemilik warung kelontong dan toko retail beranggapan bahwa kunci sukses bisnis adalah
+                        mendatangkan pembeli sebanyak-banyaknya. Padahal, keuntungan yang susah payah dikumpulkan bisa
+                        menguap begitu saja di belakang layar akibat <strong>pengelolaan stok barang yang
+                            berantakan</strong>.
+                    </p>
+                </div>
+
+                <p>
+                    Stok barang dagangan adalah bentuk lain dari modal uang Anda. Ketika barang kadaluarsa di rak,
+                    hilang tanpa jejak, atau rusak karena penyimpanan yang buruk, itu artinya uang tunai usaha Anda
+                    sedang terbuang percuma. Mari kita bahas kesalahan-kesalahan stok klasik yang wajib Anda hindari!
+                </p>
+
+                <!-- Section 1 -->
+                <section id="dampak-stok" class="space-y-4 pt-4">
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center">
+                        <span
+                            class="w-8 h-8 rounded-lg bg-rose-100 dark:bg-slate-800 text-rose-600 dark:text-rose-400 text-sm font-bold flex items-center justify-center mr-3">1</span>
+                        Dampak Kerugian Buruknya Pengelolaan Stok
+                    </h2>
+                    <p>
+                        Ketika catatan persediaan tidak cocok dengan jumlah fisik barang di gudang, dua hal merugikan
+                        ini pasti terjadi:
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div
+                            class="p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                            <h4 class="font-bold text-rose-600 dark:text-rose-400 text-sm mb-1">❌ Kehilangan Penjualan
+                                (Stockout)</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-400">Pembeli ingin belanja barang A, tetapi
+                                ternyata stok di toko habis tanpa disadari. Pembeli pun pindah ke toko kompetitor.</p>
+                        </div>
+                        <div
+                            class="p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                            <h4 class="font-bold text-rose-600 dark:text-rose-400 text-sm mb-1">💸 Modal Mati
+                                (Overstock)</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-400">Membeli terlalu banyak barang yang
+                                kurang laku sehingga modal menumpuk dan barang berisiko kadaluarsa.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 2 -->
+                <section id="kesalahan-1" class="space-y-4 pt-6">
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center">
+                        <span
+                            class="w-8 h-8 rounded-lg bg-rose-100 dark:bg-slate-800 text-rose-600 dark:text-rose-400 text-sm font-bold flex items-center justify-center mr-3">2</span>
+                        Mengabaikan Metode FIFO (First In, First Out)
+                    </h2>
+                    <p>
+                        Kesalahan paling umum di warung kelontong adalah langsung menumpuk barang baru yang datang dari
+                        supplier di bagian paling depan rak. Akhirnya, barang pasokan lama terdorong ke belakang dan
+                        terlupakan hingga tanggal kadaluarsanya terlewati.
+                    </p>
+                    <p>
+                        <strong>Solusi:</strong> Selalu terapkan prinsip <em>First In, First Out (FIFO)</em>. Barang
+                        yang pertama kali dibeli dari supplier harus diletakkan di barisan paling depan untuk dijual
+                        terlebih dahulu.
+                    </p>
+                </section>
+
+                <!-- Section 3 -->
+                <section id="kesalahan-2" class="space-y-4 pt-6">
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center">
+                        <span
+                            class="w-8 h-8 rounded-lg bg-rose-100 dark:bg-slate-800 text-rose-600 dark:text-rose-400 text-sm font-bold flex items-center justify-center mr-3">3</span>
+                        Membiarkan 'Barang Mati' Menumpuk Tanpa Evaluasi
+                    </h2>
+                    <p>
+                        Apakah ada produk di toko Anda yang tidak pernah disentuh pembeli selama lebih dari 3 bulan?
+                        Produk ini disebut <em>Slow Moving Item</em> atau <em>Dead Stock</em>.
+                    </p>
+                    <p>
+                        Jangan biarkan barang tersebut memenuhi tempat. Buatlah program diskon bundling (misalnya: beli
+                        produk terlaris gratis produk slow-moving) untuk segera mencairkan barang tersebut kembali
+                        menjadi uang tunai modal usaha.
+                    </p>
+                </section>
+
+                <!-- Section 4 -->
+                <section id="kesalahan-3" class="space-y-4 pt-6">
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center">
+                        <span
+                            class="w-8 h-8 rounded-lg bg-rose-100 dark:bg-slate-800 text-rose-600 dark:text-rose-400 text-sm font-bold flex items-center justify-center mr-3">4</span>
+                        Menunda-nunda Kegiatan Stock Opname
+                    </h2>
+                    <p>
+                        Banyak pemilik warung malas melakukan hitung fisik stok (stock opname) karena dianggap membuang
+                        waktu dan melelahkan. Akibatnya, pencurian kecil-kecilan atau barang rusak tidak pernah
+                        terdeteksi hingga nilainya membengkak di akhir tahun.
+                    </p>
+                </section>
+
+                <!-- Section 5 -->
+                <section id="solusi-stok" class="space-y-4 pt-6">
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center">
+                        <span
+                            class="w-8 h-8 rounded-lg bg-rose-100 dark:bg-slate-800 text-rose-600 dark:text-rose-400 text-sm font-bold flex items-center justify-center mr-3">5</span>
+                        Atasi Kebocoran Stok Otomatis dengan RINFIS
+                    </h2>
+                    <p>
+                        Aplikasi Kasir <strong>RINFIS</strong> dirancang khusus dengan fitur <strong>Manajemen Stok &
+                            Riwayat Mutasi Lengkap</strong>. Setiap ada transaksi kasir, stok barang langsung terpotong
+                        secara akurat.
+                    </p>
+                    <div
+                        class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-rose-100 dark:border-slate-700 space-y-3">
+                        <h4 class="font-bold text-rose-600 dark:text-rose-400 text-sm">✨ Keunggulan Fitur Stok RINFIS:
+                        </h4>
+                        <ul class="list-disc pl-5 text-sm space-y-2 text-slate-600 dark:text-slate-300">
+                            <li><strong>Pengurangan Stok Otomatis:</strong> Mencegah selisih catatan manual kasir.</li>
+                            <li><strong>Peringatan Stok Menipis:</strong> Dapatkan notifikasi saat stok barang mencapai
+                                batas minimum agar Anda bisa langsung belanja ulang.</li>
+                            <li><strong>Laporan Mutasi Transparan:</strong> Catatan histori barang masuk dari supplier,
+                                retur, dan pengeluaran barang tercatat rapi per jam.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Summary Callout -->
+                <section id="kesimpulan"
+                    class="mt-8 p-8 rounded-3xl bg-gradient-to-r from-rose-900 to-rose-700 text-white space-y-4 shadow-xl">
+                    <h3 class="text-xl font-bold">Kesimpulan</h3>
+                    <p class="text-rose-100 text-sm leading-relaxed">
+                        Pengelolaan stok barang yang teratur adalah fondasi utama bagi kesehatan finansial toko Anda.
+                        Dengan menghindari kesalahan-kesalahan di atas dan mengadopsi sistem pencatatan stok otomatis
+                        seperti RINFIS, toko Anda akan terbebas dari kebocoran modal dan siap mencetak keuntungan
+                        maksimal!
+                    </p>
+                    <div class="pt-2">
+                        <a href="../halaman-awal/login.php"
+                            class="inline-flex items-center px-6 py-3 rounded-xl bg-white text-rose-900 font-bold text-xs hover:bg-rose-50 transition shadow">
+                            Mulai Kelola Stok Toko dengan RINFIS <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- FAQ Section -->
+                <section class="pt-8 border-t border-slate-200 dark:border-slate-800">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-6">Pertanyaan Sering Diajukan (FAQ)
+                    </h3>
+                    <div class="space-y-4 text-sm">
+                        <details
+                            class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-indigo-100 dark:border-slate-700 group">
+                            <summary
+                                class="font-semibold text-slate-900 dark:text-white cursor-pointer list-none flex justify-between items-center">
+                                <span>Seberapa sering sebaiknya toko kelontong melakukan stock opname?</span>
+                                <i
+                                    class="fa-solid fa-chevron-down text-xs text-indigo-600 transition group-open:rotate-180"></i>
+                            </summary>
+                            <p class="mt-3 text-slate-600 dark:text-slate-300">
+                                Untuk produk yang perputarannya sangat cepat (Fast Moving), disarankan melakukan
+                                pengecekan seminggu sekali. Untuk produk secara keseluruhan, minimal sebulan sekali.
+                            </p>
+                        </details>
+                        <details
+                            class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-indigo-100 dark:border-slate-700 group">
+                            <summary
+                                class="font-semibold text-slate-900 dark:text-white cursor-pointer list-none flex justify-between items-center">
+                                <span>Apakah RINFIS mendukung stok berbahan resep (misal: racikan kopi/resep
+                                    makanan)?</span>
+                                <i
+                                    class="fa-solid fa-chevron-down text-xs text-indigo-600 transition group-open:rotate-180"></i>
+                            </summary>
+                            <p class="mt-3 text-slate-600 dark:text-slate-300">
+                                Ya, RINFIS mendukung pemotongan stok bahan baku resep secara fleksibel sehingga cocok
+                                digunakan baik untuk toko kelontong maupun kafe/makanan.
+                            </p>
+                        </details>
+                    </div>
+                </section>
+
+                <!-- Related Articles Section -->
+                <section class="pt-8 border-t border-slate-200 dark:border-slate-800">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-6">Artikel Terkait</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Card Kas -->
+                        <div
+                            class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-indigo-100 dark:border-slate-700 shadow-sm hover:shadow-md transition">
+                            <img src="../../assets/img/artikel/qr.png"
+                                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80';"
+                                class="w-full h-40 object-cover" alt="Mengelola Kas UMKM">
+                            <div class="p-5">
+                                <span class="text-[10px] font-bold text-indigo-600 uppercase">Keuangan</span>
+                                <h4 class="font-bold text-slate-900 dark:text-white text-base mt-1 line-clamp-2">
+                                    <a href="mengelola-kas-umkm.html" class="hover:text-indigo-600 transition">5 Cara
+                                        Mengelola Kas UMKM Agar Tidak Bocor</a>
+                                </h4>
+                                <a href="artikel_mengelola-kas-umkm.html"
+                                    class="inline-block mt-4 text-xs font-semibold text-indigo-600 dark:text-indigo-400">Baca
+                                    Selengkapnya →</a>
+                            </div>
+                        </div>
+
+                        <!-- Card QR Order -->
+                        <div
+                            class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-indigo-100 dark:border-slate-700 shadow-sm hover:shadow-md transition">
+                            <img src="../../assets/img/artikel/gudang.jpg"
+                                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1595079672139-cee25815d088?auto=format&fit=crop&w=600&q=80';"
+                                class="w-full h-40 object-cover" alt="QR Order">
+                            <div class="p-5">
+                                <span class="text-[10px] font-bold text-emerald-600 uppercase">Teknologi</span>
+                                <h4 class="font-bold text-slate-900 dark:text-white text-base mt-1 line-clamp-2">
+                                    <a href="qr-order.html" class="hover:text-indigo-600 transition">Apa Itu QR Order
+                                        dan Mengapa UMKM Wajib Memakainya?</a>
+                                </h4>
+                                <a href="artikel_qr-order.html"
+                                    class="inline-block mt-4 text-xs font-semibold text-indigo-600 dark:text-indigo-400">Baca
+                                    Selengkapnya →</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="pt-6">
+                    <a href="../../index.html#artikel"
+                        class="inline-flex items-center text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:underline">
+                        <i class="fa-solid fa-arrow-left mr-2"></i> Kembali ke Daftar Artikel
+                    </a>
+                </div>
+
+            </article>
+        </div>
+    </main>
+
+       <!-- Footer -->
+    <footer
+        class="bg-slate-900 dark:bg-slate-950 text-slate-300 py-12 border-t border-slate-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Bagian Utama Footer: Susunan Responsif Mobile & Desktop -->
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+
+                <!-- Logo & Hak Cipta -->
+                <div class="flex flex-col items-center md:items-start space-y-3">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 rounded-lg overflow-hidden bg-white flex items-center justify-center">
+                            <img src="../../assets/img/logo/rinfisunguawal.png" alt="Logo RINFIS"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <span class="text-white font-bold tracking-tight text-lg">RINFIS</span>
+                    </div>
+                    <p class="text-xs sm:text-sm">&copy; 2026 RINFIS. Hak Cipta Dilindungi.</p>
+                </div>
+
+                <!-- Bagian Instagram: Ikon & Teks Follow Us -->
+                <div class="flex flex-col items-center space-y-2">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-slate-200">Follow us on
+                        Instagram</span>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center space-x-2 px-4 py-2 rounded-xl bg-slate-800/80 hover:bg-indigo-600 text-slate-200 hover:text-white border border-slate-700 hover:border-indigo-500 transition-all shadow-sm">
+                        <i class="fa-brands fa-instagram text-lg text-pink-400 group-hover:text-white"></i>
+                        <span class="text-xs font-medium">@rinfis.official</span>
+                    </a>
+                </div>
+
+                <!-- Navigasi Tautan Footer (Responsif) -->
+                <div class="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-xs sm:text-sm">
+                    <a href="../halaman-awal/login.php" class="hover:text-white transition">Login</a>
+                    <a href="../../index.html#fitur" class="hover:text-white transition">Fitur</a>
+                    <a href="../../index.html#transformasi" class="hover:text-white transition">Transformasi</a>
+                    <a href="../../index.html#kalkulator" class="hover:text-white transition">Simulasi</a>
+                    <a href="../../index.html#artikel" class="hover:text-white transition">Artikel</a>
+                    <a href="../../index.html#harga" class="hover:text-white transition">Harga</a>
+                    <a href="../../index.html#faq" class="hover:text-white transition">RIFA AI</a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const htmlRoot = document.getElementById('html-root');
+
+        if (localStorage.getItem('rinfis_theme') === 'dark') {
+            htmlRoot.classList.remove('light');
+            htmlRoot.classList.add('dark');
+            themeIcon.classList.remove('fa-sun', 'text-amber-500');
+            themeIcon.classList.add('fa-moon', 'text-indigo-300');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            if (htmlRoot.classList.contains('light')) {
+                htmlRoot.classList.remove('light');
+                htmlRoot.classList.add('dark');
+                themeIcon.classList.remove('fa-sun', 'text-amber-500');
+                themeIcon.classList.add('fa-moon', 'text-indigo-300');
+                localStorage.setItem('rinfis_theme', 'dark');
+            } else {
+                htmlRoot.classList.remove('dark');
+                htmlRoot.classList.add('light');
+                themeIcon.classList.remove('fa-moon', 'text-indigo-300');
+                themeIcon.classList.add('fa-sun', 'text-amber-500');
+                localStorage.setItem('rinfis_theme', 'light');
+            }
+        });
+    </script>
+</body>
+
+</html>
