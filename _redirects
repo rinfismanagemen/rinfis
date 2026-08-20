@@ -1,0 +1,5 @@
+/   /pages/halaman-landing-pages/index.html   200
+/halaman-autentifikasi/*   /pages/halaman-autentifikasi/:splat   200
+/halaman-autentikasi/*   /pages/halaman-autentifikasi/:splat   200
+/halaman-owner/*   /pages/halaman-owner/:splat   200
+/*   /pages/halaman-landing-pages/index.html   404
