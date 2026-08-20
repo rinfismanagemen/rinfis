@@ -1,0 +1,8 @@
+# 1. Halaman utama (domain.com) membuka landing page
+/   /pages/halaman-landing-pages/index.html   200
+
+# 2. Akses halaman autentikasi tanpa perlu mengetik /pages/
+/halaman-autentifikasi/*   /pages/halaman-autentifikasi/:splat   200
+
+# 3. Akses halaman owner tanpa perlu mengetik /pages/
+/halaman-owner/*   /pages/halaman-owner/:splat   200
